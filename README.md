@@ -40,13 +40,6 @@ npx ts-node src/index.ts
 
 ```
 my-project
-│-- /config
-│   │-- eslint.config.mjs
-│   │-- prettierrc.json
-│   │-- tsconfig.json
-│   │-- .env
-│   │-- .eslintignore
-│   │-- .prettierignore
 │── src
 │   ├── index.ts  # Entry point
 │── package.json
