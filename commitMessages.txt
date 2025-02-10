@@ -9,7 +9,7 @@ Here are some nice commit message ideas with emojis to keep your repository well
 ### 💻 Frontend Commits  
 - 🎨 Improve UI design – Updated styles and layout.  
 - 🛠️ Fix UI bug – Fixed layout issues.  
-- ⚡ Optimize JavaScript – Improved performance.  
+- ⚡ Optimize code – Improved performance.  
 - 🌐 Add responsiveness – Made UI mobile-friendly.  
 - 🏗 Refactor frontend code – Cleaned up components.  
 
