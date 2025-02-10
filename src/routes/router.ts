@@ -1,9 +1,9 @@
-import { Router } from 'express'
+import { Router } from "express";
 
-import { basicGet } from '../controllers/user'
+import { basicGet } from "../controllers/user";
 
-const useRouter = Router()
+const useRouter = Router();
 
-useRouter.route('/').get(basicGet)
+useRouter.route("/").get(basicGet);
 
-export { useRouter }
+export { useRouter };

@@ -1,2 +1,1 @@
-
-console.log("This is schema file")
+console.log("This is schema file");

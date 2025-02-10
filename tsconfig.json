@@ -23,6 +23,12 @@
     "skipLibCheck": true,
     "types": ["node"]
   },
-  "include": ["src", "config", "src/env.config.ts", "env.config.js", "eslint.config.mjs"],
+  "include": [
+    "src",
+    "config",
+    "src/env.config.ts",
+    "env.config.js",
+    "eslint.config.mjs"
+  ],
   "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }
