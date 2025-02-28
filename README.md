@@ -14,7 +14,7 @@ This is a **template repository** designed for quick and efficient project setup
 Use the following command to generate a **secure 32-character JWT secret**:  
 
 ```bash
-openssl rand -base64 24
+openssl rand -base64 32
 ```
 
 ### 🚀 Getting Started  
