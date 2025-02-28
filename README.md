@@ -1,42 +1,50 @@
-## Template Repository 🚀
+## Template Repository 🚀  
 
-This is a **template repository** designed for quick and efficient project setup. It includes a pre-configured **TypeScript + Node.js** environment, allowing you to start coding immediately without repetitive setup tasks.
+This is a **template repository** designed for quick and efficient project setup. It includes a pre-configured **TypeScript + Node.js** environment, allowing you to start coding immediately without repetitive setup tasks.  
 
-### 🛠 Features
+### 🛠 Features  
 
-- **TypeScript + Node.js** setup
-- **Pre-configured `tsconfig.json`** with sensible defaults
-- **ESLint & Prettier** for consistent code formatting (optional)
-- **Pre-configured `package.json`** for easy dependency management
+- **TypeScript + Node.js** setup  
+- **Pre-configured `tsconfig.json`** with sensible defaults  
+- **ESLint & Prettier** for consistent code formatting (optional)  
+- **Pre-configured `package.json`** for easy dependency management  
 
-### 🚀 Getting Started
+### 🔑 Generate a 32-Character JWT Secret  
 
-#### 1️⃣ Clone the Repository
+Use the following command to generate a **secure 32-character JWT secret**:  
+
+```bash
+openssl rand -base64 24
+```
+
+### 🚀 Getting Started  
+
+#### 1️⃣ Clone the Repository  
 
 ```sh
 git clone https://github.com/your-username/template-repo.git my-project
 cd my-project
 ```
 
-#### 2️⃣ Initialize TypeScript
+#### 2️⃣ Initialize TypeScript  
 
 ```sh
 tsc --init
 ```
 
-#### 3️⃣ Install Dependencies
+#### 3️⃣ Install Dependencies  
 
 ```sh
 npm install
 ```
 
-#### 4️⃣ Run the Project
+#### 4️⃣ Run the Project  
 
 ```sh
 npx ts-node src/index.ts
 ```
 
-### 📂 Folder Structure
+### 📂 Folder Structure  
 
 ```
 my-project
@@ -47,8 +55,12 @@ my-project
 │── .gitignore
 ```
 
-### 📜 License
+### 📜 License  
 
-This project is licensed under the **MIT License**.
+This project is licensed under the **MIT License**.  
 
-Lets get started!!! 🚀🚀
+**Let's get started! 🚀🚀**  
+
+---
+
+Let me know if you need further improvements! 😊
