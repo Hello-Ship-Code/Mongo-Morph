@@ -1,4 +1,4 @@
-## Template Repository 🚀  
+## Mongo Morph 🧬
 
 This is a **template repository** designed for quick and efficient project setup. It includes a pre-configured **TypeScript + Node.js** environment, allowing you to start coding immediately without repetitive setup tasks.  
 
