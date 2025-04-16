@@ -1,0 +1,1 @@
+openssl rand -base64 64 # generates a random 64 secret key for your JWT

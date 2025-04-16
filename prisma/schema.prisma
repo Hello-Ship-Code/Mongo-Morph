@@ -1,0 +1,67 @@
+// ---------------------
+// PRISMA SETUP
+// ---------------------
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------
+// MODELS
+// ---------------------
+
+model User {
+  id           String         @id @default(auto()) @map("_id") @db.ObjectId
+  fullName     String
+  email        String         @unique
+  otp          Int
+  userName     String
+  location     String
+  gender       String
+  dob          DateTime
+  password     String
+  terms        Boolean
+  wallet       UserWallet?
+  categories   UserCategory[]
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+}
+
+model UserWallet {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId     String   @db.ObjectId @unique
+  userCoins  BigInt   @default(50000)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+}
+
+model Categories {
+  id          String         @id @default(auto()) @map("_id") @db.ObjectId
+  name        String         @unique
+  description String
+  icon        String
+  users       UserCategory[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model UserCategory {
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  user        User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String     @db.ObjectId
+  category    Categories @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId  String     @db.ObjectId
+  createdAt   DateTime   @default(now())
+
+  @@unique([userId, categoryId])
+  @@index([userId])
+  @@index([categoryId])
+}
+

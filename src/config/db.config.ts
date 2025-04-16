@@ -1,7 +1,5 @@
-import mongoose from 'mongoose'
+import { PrismaClient } from '@prisma/client'
 
-async function connect(url: string): Promise<typeof mongoose> {
-  return mongoose.connect(url)
-}
+const prisma = new PrismaClient()
 
-export { connect }
+export { prisma }
