@@ -7,14 +7,19 @@ import { userLogin } from '../services/user-login'
 
 export const loginController: RequestHandler = async (req: Request, res: Response) => {
   try {
-    const userData: userLoginTypes = req.body
+    const { email, password } = req.body as userLoginTypes
 
-    if (!userData) {
-      res.redirect('/login')
-      return
+    if (!email || !password) {
+      const missingFields = []
+      if (!email) missingFields.push('email')
+      if (!password) missingFields.push('password')
+
+      res.status(400).json({
+        message: `${missingFields.join(' and ')} ${missingFields.length > 1 ? 'are' : 'is'} required`,
+      })
     }
 
-    const user = await userLogin(userData)
+    const user = await userLogin({ email, password })
 
     if (!user) {
       res.redirect('/login')
@@ -36,6 +41,9 @@ export const loginController: RequestHandler = async (req: Request, res: Respons
       },
     })
   } catch (error) {
-    throw new HttpError(`${error}`, 501)
+    const status = error instanceof HttpError ? error.statusCode : 500
+    const message = error instanceof Error ? error.message : 'Something went wrong'
+
+    res.status(status).json({ message })
   }
 }

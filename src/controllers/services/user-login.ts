@@ -14,7 +14,6 @@ export const userLogin = async (userData: userLoginTypes) => {
         id: true,
         email: true,
         userName: true,
-        fullName: true,
         password: true,
       },
     })

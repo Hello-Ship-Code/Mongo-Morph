@@ -27,12 +27,12 @@
     "eslint-plugin-prettier": "^5.2.3",
     "nodemon": "^3.1.9",
     "prettier": "^3.5.2",
-    "prisma": "^6.6.0",
+    "prisma": "^6.8.2",
     "ts-node": "^10.9.2",
     "typescript-eslint": "^8.23.0"
   },
   "dependencies": {
-    "@prisma/client": "^6.6.0",
+    "@prisma/client": "^6.8.2",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",

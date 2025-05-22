@@ -9,13 +9,9 @@ interface DecodeUser extends JwtPayload {
 }
 
 export const setUser = (user: DecodeUser) => {
-  return jwt.sign(
-    { id: user.id, userName: user.userName, email: user.email, fullName: user.fullName },
-    env.JWT_SECRET,
-    {
-      expiresIn: '7d',
-    },
-  )
+  return jwt.sign({ id: user.id, userName: user.userName, email: user.email }, env.JWT_SECRET, {
+    expiresIn: '7d',
+  })
 }
 
 export const getUser = (token: string): DecodeUser | null => {

@@ -13,17 +13,8 @@ export const userSignup = async (userData: userSignupTypes) => {
     return prisma.user.create({
       data: {
         email: userData.email,
-        fullName: userData.fullName,
         userName: userData.userName,
-        location: userData.location,
-        gender: userData.gender,
-        dob: userData.dob,
         password: hashedPassword,
-        otp: 1234,
-        terms: true,
-        wallet: {
-          create: {},
-        },
       },
     })
   } catch (error) {
