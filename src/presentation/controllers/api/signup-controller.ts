@@ -1,7 +1,7 @@
 import type { Request, RequestHandler, Response } from 'express'
 import { ZodError } from 'zod'
 
-import { userValidation } from '../../validation/user/user-validation'
+import { userValidation } from '../../application/validation/user/user-validation'
 
 import HttpError from '../../utils/HttpError'
 import { userSignupTypes } from '../../utils/user/user-types'

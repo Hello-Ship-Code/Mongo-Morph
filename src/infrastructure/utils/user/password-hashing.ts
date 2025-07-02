@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt'
 
-import { env } from '../../config/env.config'
+import { env } from '../../infrastructure/http/config/env.config'
 
 export const hashPassword = async (password: string) => {
   return await bcrypt.hash(password, env.SALTROUNDS)

@@ -1,4 +1,4 @@
-import { prisma } from '../../config/db.config'
+import { prisma } from '../../infrastructure/http/config/db.config'
 
 import HttpError from '../../utils/HttpError'
 import { hashPassword } from '../../utils/user/password-hashing'

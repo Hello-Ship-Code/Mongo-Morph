@@ -1,7 +1,7 @@
 import { RequestHandler } from 'express'
 
-import HttpError from '../utils/HttpError'
-import { getUser } from '../utils/JWT/auth'
+import HttpError from '../../../utils/HttpError'
+import { getUser } from '../../../utils/JWT/auth'
 
 export const authMiddleware: RequestHandler = (req, res, next) => {
   try {

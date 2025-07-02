@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { env } from './config/env.config'
+import { env } from './infrastructure/http/config/env.config'
 
 import { appRouter } from './routes/router'
 
